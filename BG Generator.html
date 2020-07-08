@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BG GENERATOR</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <style>
+           body{background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 255, 0), rgb(0, 255, 255));}
+        </style>
+    </head>
+    
+<body class="text-center">
+    <div class="container-fluid">
+<h1 class="text-center p-5 "> Background Generator</h1>
+<input class="color1" type="color" value="#00ff00" >
+<input class="color2" type="color" value="#ffff00" >
+<input class="color3" type="color" value="#00ffff" >
+<h3 class="pt-5">This Background Generator is linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 128), rgb(0, 255, 255)</h3>
+
+</div>
+</body>
+<script>
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
+var color3 = document.querySelector(".color3");
+var body = document.querySelector("body");
+
+function bgg(){
+    body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ", " + color3.value + ")";
+    document.querySelector("h3").innerHTML = "This Background Generator is " + body.style.background;
+}
+color1.addEventListener("input", bgg);
+color2.addEventListener("input", bgg);
+color3.addEventListener("input", bgg);
+    
+</script>
+</html>
+
+
